@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  nuxt:
+    image: 210146919315.dkr.ecr.ap-northeast-3.amazonaws.com/portfolio-nuxt
+    command: sh -c "cd /workspace/nuxt && npm run start"
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - ./components:/workspace/nuxt/components
+volumes:
+  components:
